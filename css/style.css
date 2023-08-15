@@ -91,3 +91,10 @@ form :placeholder-shown {
   position: relative;
   bottom: 15px;
 }
+
+.open-source {
+  font-size: 10px;
+  position: relative;
+  bottom: 120px;
+  left: 150px;
+}
