@@ -1,0 +1,93 @@
+h1,
+h2 {
+  color: #565c5e;
+  font-family: "BebasNeue-Regular", "Gill Sans", "Gill Sans MT", Calibri,
+    "Trebuchet MS", sans-serif;
+  font-size: 35px;
+}
+
+h6 {
+  color: #565c5e;
+  font-style: bold;
+  font-family: "Rajdhani Medium", Georgia, Times, "Times New Roman", serif;
+}
+
+p {
+  color: #9da7aa;
+  font-style: italic;
+  font-family: "Rajdhani", Georgia, Times, "Times New Roman", serif;
+}
+
+img {
+  width: 60px;
+}
+
+form :placeholder-shown {
+  font-family: "Rajdhani", Georgia, Times, "Times New Roman", serif;
+  font-size: 16px;
+}
+
+.weather-forecast {
+  width: 700px;
+  display: block;
+  margin: 120px auto;
+  padding: 0;
+  border: solid 1px beige;
+}
+
+.realtime form {
+  margin: 15px 0;
+}
+
+.real-forecast {
+  background: rgb(200, 234, 244, 0.5);
+}
+
+.real-forecast img {
+  padding: 20px 0 0;
+}
+
+.future-forecast {
+  padding: 25px 10px 15px;
+}
+
+.future-forecast p {
+  color: #565c5e;
+  font-style: normal;
+}
+
+.future-forecast img {
+  padding-bottom: 15px;
+}
+
+.button {
+  text-align: center;
+  border: 1px solid;
+  padding: 10px 20px;
+  margin: 0 10px;
+  font-size: 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: none;
+}
+
+.button-all {
+  color: #fff;
+  background: #258dc8;
+  border: #258dc8;
+  padding: 10px 30px;
+}
+
+.button-current {
+  color: #fff;
+  background: #ffab68;
+  border: #ffab68;
+}
+
+.temp-unit::after {
+  content: "°C";
+  color: #565c5e;
+  font-size: 15px;
+  position: relative;
+  bottom: 15px;
+}

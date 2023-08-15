@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous" />
+    <script src="https://kit.fontawesome.com/5333373ceb.js" crossorigin="anonymous"></script>
+    <title>Weather Forecast</title>
+</head>
+
+<body>
+    <div class="weather-forecast">
+        <div class="container realtime">
+            <div class="row real-forecast pb-3 pt-4 px-3 text-center">
+                <div class="col-3 gy-2">
+                    <h6 id="daytime">WEDNESDAY</h6>
+                    <h6>
+                        19/07
+                    </h6>
+                    <p>
+                        Sunny
+                    </p>
+                </div>
+                <div class="col-3">
+                    <h1 id="city">Lisbon</h1>
+                    <h2 class="temp-unit" id="temperature">30</h2>
+                </div>
+                <div class="col-sm">
+                    <img src="images/sun.png" alt="sunny day" />
+                </div>
+                <div class="col-3 gy-3">
+                    <p class="mb-1">Precipitation: 50%</p>
+                    <p>Wind: 15km/h</p>
+                </div>
+
+                <form class="row align-items-center" id="search-form">
+                    <div class="col-8">
+                        <input id="search-input" class="form-control" type="text" placeholder="Search for a city"
+                            aria-label="Search for a city" autocomplete="off" autofocus="on" />
+                    </div>
+                    <span class="col-2">
+                        <button id="current-cities" type="submit" value="search" class="button button-all">
+                            GO!
+                        </button>
+                    </span>
+                    <span class="col-2">
+                        <button id="current-city" type="submit" value="search" class="button button-current">
+                            Current
+                        </button>
+                    </span>
+            </div>
+            </form>
+        </div>
+        <div class="container">
+            <div class="row future-forecast text-center">
+                <div class="col-sm">
+                    <p>WED</p>
+                    <img src="images/sun.png" alt="sun" />
+                    <p>30°C</p>
+                </div>
+                <div class="col-sm">
+                    <p>THU</p>
+                    <img src="images/sun.png" alt="sun" />
+                    <p>29°C</p>
+                </div>
+                <div class="col-sm">
+                    <p>FRI</p>
+                    <img src="images/sun.png" alt="sun" />
+                    <p>28°C</p>
+                </div>
+                <div class="col-sm">
+                    <p>SAT</p>
+                    <img src="images/sun.png" alt="sun" />
+                    <p>26°C</p>
+                </div>
+                <div class="col-sm">
+                    <p>SUN</p>
+                    <img src="images/sun.png" alt="sun" />
+                    <p>24°C</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="javascript/index.js"></script>
+</body>
+
+</html>
