@@ -92,9 +92,9 @@ form :placeholder-shown {
   bottom: 15px;
 }
 
-.open-source {
+.open-source-link {
   font-size: 10px;
   position: relative;
   bottom: 120px;
-  left: 150px;
+  left: 300px;
 }
