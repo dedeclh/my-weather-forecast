@@ -20,10 +20,15 @@ function formatDate() {
 formatDate();
 
 function showCurrentDetails(response) {
-  let temperature = document.querySelector("#temperature");
-  temperature.innerHTML = Math.round(response.data.main.temp);
-  let cities = document.querySelector("#city");
-  cities.innerHTML = response.data.name;
+  let temperatureElement = document.querySelector("#temperature");
+  let citiesElement = document.querySelector("#city");
+  let humidityElement = document.querySelector("#humidity");
+  let windElement = document.querySelector("#wind");
+
+  temperatureElement.innerHTML = Math.round(response.data.main.temp);
+  citiesElement.innerHTML = response.data.name;
+  humidityElement.innerHTML = response.data.main.humidity;
+  windElement.innerHTML = Math.round(response.data.wind.speed * 3.6);
 }
 
 function showPosition(position) {
