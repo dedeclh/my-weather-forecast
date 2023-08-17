@@ -6,6 +6,11 @@ h2 {
   font-size: 35px;
 }
 
+h2 {
+  position: relative;
+  right: 24px;
+}
+
 h6 {
   color: #565c5e;
   font-style: bold;
@@ -88,12 +93,25 @@ form :placeholder-shown {
   border: #ffab68;
 }
 
-.temp-unit::after {
-  content: "°C";
+.weather-forecast .metric {
+  text-decoration: none;
+}
+
+.weather-forecast .units {
   color: #565c5e;
-  font-size: 15px;
+  font-size: 10px;
   position: relative;
-  bottom: 15px;
+  top: -55px;
+  left: 10px;
+}
+
+.weather-forecast .active {
+  color: rgb(33, 33, 33);
+  cursor: default;
+}
+
+.weather-forecast .active:hover {
+  text-decoration: none;
 }
 
 .open-source-link {
