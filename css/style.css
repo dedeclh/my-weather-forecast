@@ -22,6 +22,10 @@ img {
   width: 60px;
 }
 
+p:first-letter {
+  text-transform: capitalize;
+}
+
 form :placeholder-shown {
   font-family: "Rajdhani", Georgia, Times, "Times New Roman", serif;
   font-size: 16px;

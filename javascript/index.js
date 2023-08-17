@@ -24,11 +24,13 @@ function showCurrentDetails(response) {
   let citiesElement = document.querySelector("#city");
   let humidityElement = document.querySelector("#humidity");
   let windElement = document.querySelector("#wind");
+  let descriptionElement = document.querySelector("#description");
 
   temperatureElement.innerHTML = Math.round(response.data.main.temp);
   citiesElement.innerHTML = response.data.name;
   humidityElement.innerHTML = response.data.main.humidity;
   windElement.innerHTML = Math.round(response.data.wind.speed * 3.6);
+  descriptionElement.innerHTML = response.data.weather[0].description;
 }
 
 function showPosition(position) {
