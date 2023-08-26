@@ -13,8 +13,8 @@ if (minutes < 10) {
 }
 
 function formatDate() {
-  let h6 = document.querySelector("h6");
-  h6.innerHTML = `${day} ${hours}:${minutes}`;
+  let date = document.querySelector("#date");
+  date.innerHTML = `${day} ${hours}:${minutes}`;
 }
 
 formatDate();
@@ -25,7 +25,6 @@ function showCurrentDetails(response) {
   let humidityElement = document.querySelector("#humidity");
   let windElement = document.querySelector("#wind");
   let descriptionElement = document.querySelector("#description");
-  let dateElement = document.querySelector("#date");
   let iconElement = document.querySelector("#icon");
 
   let celsiusTemperature = response.data.main.temp;
@@ -35,7 +34,6 @@ function showCurrentDetails(response) {
   humidityElement.innerHTML = response.data.main.humidity;
   windElement.innerHTML = Math.round(response.data.wind.speed * 3.6);
   descriptionElement.innerHTML = response.data.weather[0].description;
-  dateElement.innerHTML = formatDate(response.data.dt * 1000);
   icon.setAttribute("src", `images/${response.data.weather[0].icon}.png`);
   iconElement.setAttribute("alt", response.data.weather[0].description);
 }
