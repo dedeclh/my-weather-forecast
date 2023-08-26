@@ -13,80 +13,83 @@
 </head>
 
 <body>
-    <div class="weather-forecast">
-        <div class="container realtime">
+    <div class="weather-forecast-wrapper">
+        <div class="weather-forecast">
+            <div class="container realtime">
 
-            <div class="row real-forecast pb-3 pt-4 px-3 text-center">
-                <div class="col-3 gy-3">
-                    <h6 id="date"></h6>
-                    <p id="description">
-                    </p>
-                </div>
-                <div class="col-3">
-                    <h1 id="city"></h1>
-                    <h2 class="temp-unit" id="temperature"></h2>
-                    <span class="units"><a href="#" id="celsius-link" class="active metric">°C</a> |
-                        <a href="#" id="fahrenheit-link" class="metric">°F</a>
-                    </span>
-                </div>
-                <div class="col-sm">
-                    <img src="images/sun.png" alt="sunny day" id="icon" />
-                </div>
-                <div class="col-3 gy-3">
-                    <p class="mb-1">Humidity: <span id="humidity"></span> %</p>
-                    <p>Wind: <span id="wind"></span> km/h</p>
-                </div>
-
-                <form class="row align-items-center" id="search-form">
-                    <div class="col-8">
-                        <input id="search-input" class="form-control" type="text" placeholder="Search for a city"
-                            aria-label="Search for a city" autocomplete="off" autofocus="on" />
+                <div class="row real-forecast pb-3 pt-4 px-3 text-center">
+                    <div class="col-3 gy-3">
+                        <h6 id="date"></h6>
+                        <p id="description">
+                        </p>
                     </div>
-                    <span class="col-2">
-                        <button id="current-cities" type="submit" value="search" class="button button-all">
-                            GO!
-                        </button>
-                    </span>
-                    <span class="col-2">
-                        <button id="current-city" type="submit" value="search" class="button button-current">
-                            Current
-                        </button>
-                    </span>
+                    <div class="col-3">
+                        <h1 id="city"></h1>
+                        <h2 class="temp-unit" id="temperature"></h2>
+                        <span class="units"><a href="#" id="celsius-link" class="active metric">°C</a> |
+                            <a href="#" id="fahrenheit-link" class="metric">°F</a>
+                        </span>
+                    </div>
+                    <div class="col-sm">
+                        <img src="images/sun.png" alt="sunny day" id="icon" />
+                    </div>
+                    <div class="col-3 gy-3">
+                        <p class="mb-1">Humidity: <span id="humidity"></span> %</p>
+                        <p>Wind: <span id="wind"></span> km/h</p>
+                    </div>
+
+                    <form class="row align-items-center" id="search-form">
+                        <div class="col-8">
+                            <input id="search-input" class="form-control" type="text" placeholder="Search for a city"
+                                aria-label="Search for a city" autocomplete="off" autofocus="on" />
+                        </div>
+                        <span class="col-2">
+                            <button id="current-cities" type="submit" value="search" class="button button-all">
+                                GO!
+                            </button>
+                        </span>
+                        <span class="col-2">
+                            <button id="current-city" type="submit" value="search" class="button button-current">
+                                Current
+                            </button>
+                        </span>
+                </div>
+                </form>
             </div>
-            </form>
-        </div>
-        <div class="container">
-            <div class="row future-forecast text-center">
-                <div class="col-sm">
-                    <p>WED</p>
-                    <img src="images/01d.png" alt="sun" />
-                    <p>30°C</p>
-                </div>
-                <div class="col-sm">
-                    <p>THU</p>
-                    <img src="images/01d.png" alt="sun" />
-                    <p>29°C</p>
-                </div>
-                <div class="col-sm">
-                    <p>FRI</p>
-                    <img src="images/01d.png" alt="sun" />
-                    <p>28°C</p>
-                </div>
-                <div class="col-sm">
-                    <p>SAT</p>
-                    <img src="images/01d.png" alt="sun" />
-                    <p>26°C</p>
-                </div>
-                <div class="col-sm">
-                    <p>SUN</p>
-                    <img src="images/01d.png" alt="sun" />
-                    <p>24°C</p>
+            <div class="container">
+                <div class="row future-forecast text-center">
+                    <div class="col-sm">
+                        <p>WED</p>
+                        <img src="images/01d.png" alt="sun" />
+                        <p>30°C</p>
+                    </div>
+                    <div class="col-sm">
+                        <p>THU</p>
+                        <img src="images/01d.png" alt="sun" />
+                        <p>29°C</p>
+                    </div>
+                    <div class="col-sm">
+                        <p>FRI</p>
+                        <img src="images/01d.png" alt="sun" />
+                        <p>28°C</p>
+                    </div>
+                    <div class="col-sm">
+                        <p>SAT</p>
+                        <img src="images/01d.png" alt="sun" />
+                        <p>26°C</p>
+                    </div>
+                    <div class="col-sm">
+                        <p>SUN</p>
+                        <img src="images/01d.png" alt="sun" />
+                        <p>24°C</p>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="open-source-link">
-        <a href="https://github.com/dedeclh/my-weather-forecast" target="_blank"> Open-source code</a> by Denise Silva
+        <div class="open-source-link">
+            <a href="https://github.com/dedeclh/my-weather-forecast" target="_blank"> Open-source code</a> by Denise
+            Silva
+        </div>
     </div>
     <script src="javascript/index.js"></script>
 </body>

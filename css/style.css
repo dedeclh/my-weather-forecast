@@ -93,6 +93,11 @@ form :placeholder-shown {
   border: #ffab68;
 }
 
+.weather-forecast-wrapper {
+  max-width: 700px;
+  margin: 30px auto;
+}
+
 .weather-forecast .metric {
   text-decoration: none;
 }
