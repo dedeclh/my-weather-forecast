@@ -19,6 +19,31 @@ function formatDate() {
 
 formatDate();
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let forecastHTML = `<div class="row">`;
+  let days = ["Thu", "Fri", "Sat", "Sun"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+      <div class="col-2">
+  <div class="forecast-date">${day}</div>
+  <img src="images/01d.png"
+  alt=""
+  />
+  <div class="forecast-temp">
+  <span class="forecast-temp-max">30°</span>
+  <span class="forecast-temp-min">22°</span>
+  </div>
+  </div>
+  `;
+  });
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
 function showCurrentDetails(response) {
   let temperatureElement = document.querySelector("#temperature");
   let citiesElement = document.querySelector("#city");
@@ -80,3 +105,4 @@ let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", showCelsiusTemperature);
 
 searchCity("New York");
+displayForecast();
