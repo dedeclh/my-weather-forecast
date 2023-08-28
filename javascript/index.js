@@ -1,6 +1,14 @@
 let currentDate = new Date();
 
-let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+let days = [
+  "SUNDAY",
+  "MONDAY",
+  "TUESDAY",
+  "WEDNESDAY",
+  "THURSDAY",
+  "FRIDAY",
+  "SATURDAY",
+];
 let day = days[currentDate.getDay()];
 
 let hours = currentDate.getHours();
@@ -22,7 +30,7 @@ formatDate();
 function formatDay(timestamp) {
   let date = new Date(timestamp * 1000);
   let day = date.getDay();
-  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  let days = ["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"];
 
   return days[day];
 }

@@ -6,6 +6,10 @@ h2 {
   font-size: 35px;
 }
 
+h1 {
+  padding-top: 10px;
+}
+
 h2 {
   position: relative;
   right: 24px;
@@ -15,16 +19,13 @@ h6 {
   color: #565c5e;
   font-style: bold;
   font-family: "Rajdhani Medium", Georgia, Times, "Times New Roman", serif;
+  padding-top: 12px;
 }
 
 p {
   color: #9da7aa;
   font-style: italic;
   font-family: "Rajdhani", Georgia, Times, "Times New Roman", serif;
-}
-
-img {
-  width: 60px;
 }
 
 p:first-letter {
@@ -42,6 +43,7 @@ form :placeholder-shown {
   margin: 120px auto;
   padding: 0;
   border: solid 1px beige;
+  border-radius: 25px;
 }
 
 .realtime form {
@@ -50,10 +52,17 @@ form :placeholder-shown {
 
 .real-forecast {
   background: rgb(200, 234, 244, 0.5);
+  border-radius: 25px 25px 0 0;
 }
 
-.real-forecast img {
-  padding: 20px 0 0;
+.main-icon {
+  width: 65px;
+  padding: 15px 0 0;
+}
+
+.specs {
+  padding-top: 10px;
+  font-size: 16px;
 }
 
 .future-forecast {
@@ -67,6 +76,7 @@ form :placeholder-shown {
 
 .future-forecast img {
   padding-bottom: 15px;
+  width: 45px;
 }
 
 .button {
@@ -119,9 +129,25 @@ form :placeholder-shown {
   text-decoration: none;
 }
 
+.forecast-temp,
+.forecast-date {
+  font-size: 12px;
+  padding-bottom: 15px;
+  color: #565c5e;
+}
+
+.forecast-temp-min {
+  opacity: 0.6;
+}
+
 .open-source-link {
   font-size: 10px;
   position: relative;
   bottom: 120px;
   left: 300px;
+  padding-top: 10px;
+}
+
+.name-link {
+  opacity: 0.4;
 }
