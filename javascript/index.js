@@ -19,39 +19,50 @@ function formatDate() {
 
 formatDate();
 
-function displayForecast() {
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+  return days[day];
+}
+
+function displayForecast(response) {
+  let forecast = response.data.daily;
+  console.log(response.data.daily);
+
   let forecastElement = document.querySelector("#forecast");
 
   let forecastHTML = `<div class="row">`;
-  let days = ["Thu", "Fri", "Sat", "Sun"];
-  days.forEach(function (day) {
-    forecastHTML =
-      forecastHTML +
-      `
-      <div class="col-2">
-  <div class="forecast-date">${day}</div>
-  <img src="images/01d.png"
+  forecast.forEach(function (forecastDay, index) {
+    if (index < 6) {
+      forecastHTML =
+        forecastHTML +
+        `
+      <div class="col-sm">
+  <div class="forecast-date">${formatDay(forecastDay.dt)}</div>
+  <img src="images/${forecastDay.weather[0].icon}.png"
   alt=""
   />
   <div class="forecast-temp">
-  <span class="forecast-temp-max">30°</span>
-  <span class="forecast-temp-min">22°</span>
+  <span class="forecast-temp-max">${Math.round(forecastDay.temp.max)}°</span>
+  <span class="forecast-temp-min">${Math.round(forecastDay.temp.min)}°</span>
   </div>
   </div>
   `;
+    }
   });
   forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
 }
 
 function getForecast(coordinates) {
-  let apiKey = "58a6775f97527351bf6c6966e209be39";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+  let apiKey = "515c9ddbeb3cda9061acfab71031839e";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayForecast);
 }
 
 function showCurrentDetails(response) {
-  console.log(response.data.daily);
   let temperatureElement = document.querySelector("#temperature");
   let citiesElement = document.querySelector("#city");
   let humidityElement = document.querySelector("#humidity");
@@ -113,5 +124,4 @@ fahrenheitLink.addEventListener("click", showFahrenheitTemperature);
 let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", showCelsiusTemperature);
 
-searchCity("New York");
-displayForecast();
+searchCity("Lisbon");
