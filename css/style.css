@@ -33,7 +33,7 @@ p:first-letter {
 }
 
 form :placeholder-shown {
-  font-family: "Rajdhani", Georgia, Times, "Times New Roman", serif;
+  font-family: "Rajdhani", Arial, Helvetica, sans-serif;
   font-size: 16px;
 }
 
