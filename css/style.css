@@ -1,8 +1,8 @@
 h1,
 h2 {
   color: #565c5e;
-  font-family: "BebasNeue-Regular", "Gill Sans", "Gill Sans MT", Calibri,
-    "Trebuchet MS", sans-serif;
+  font-family: "BebasNeue-Regular", Impact, Haettenschweiler,
+    "Arial Narrow Bold", sans-serif;
   font-size: 35px;
 }
 
@@ -18,14 +18,14 @@ h2 {
 h6 {
   color: #565c5e;
   font-style: bold;
-  font-family: "Rajdhani Medium", Georgia, Times, "Times New Roman", serif;
+  font-family: "Rajdhani Medium", Arial, Helvetica, sans-serif;
   padding-top: 12px;
 }
 
 p {
   color: #9da7aa;
   font-style: italic;
-  font-family: "Rajdhani", Georgia, Times, "Times New Roman", serif;
+  font-family: "Rajdhani", Arial, Helvetica, sans-serif;
 }
 
 p:first-letter {
